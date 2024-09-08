@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Editable Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Dynamic Resume Form -->
+        <section id="resume-form">
+            <h2>Build Your Resume</h2>
+            <form id="resumeBuilderForm">
+                <!-- Personal Information -->
+                <h3>Personal Information</h3>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+                
+                <!-- Education -->
+                <h3>Education</h3>
+                <label for="degree">Degree:</label>
+                <input type="text" id="degree" name="degree" autocomplete="organization-title" required>
+                
+                <label for="institution">Institution:</label>
+                <input type="text" id="institution" name="institution" autocomplete="organization" required>
+                
+                <label for="gradYear">Graduation Year:</label>
+                <input type="text" id="gradYear" name="gradYear" autocomplete="bday-year" required>
+                
+                <!-- Work Experience -->
+                <h3>Work Experience</h3>
+                <label for="jobTitle">Job Title:</label>
+                <input type="text" id="jobTitle" name="jobTitle" autocomplete="organization-title" required>
+                
+                <label for="company">Company:</label>
+                <input type="text" id="company" name="company" autocomplete="organization" required>
+                
+                <label for="jobDescription">Job Description:</label>
+                <textarea id="jobDescription" name="jobDescription" autocomplete="off" required></textarea>
+                
+                <!-- Skills -->
+                <h3>Skills</h3>
+                <label for="skills">List Your Skills (comma separated):</label>
+                <input type="text" id="skills" name="skills" autocomplete="off" required>
+
+                <!-- Submit Button -->
+                <button type="submit">Generate Resume</button>
+            </form>
+        </section>
+
+        <!-- Section to Display Generated Editable Resume -->
+        <section id="resume-display">
+            <h2>Your Generated Resume</h2>
+            <div id="generated-resume"></div>
+        </section>
+    </div>
+
+    <!-- Link to JavaScript (builder.js) -->
+    <script src="script.js"></script>
+</body>
+</html>
